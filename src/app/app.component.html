@@ -1,0 +1,25 @@
+<!-- <div class="tab-group">
+    <mat-tab-group>
+        <a routerLink="/"><mat-tab label="Kura"></mat-tab></a>
+        <a routerLink="/savedDraws"><mat-tab label="Kayıtlı Kuralar"></mat-tab></a>
+    </mat-tab-group>
+</div> -->
+<div class="tab-group sticky">
+    <nav mat-tab-nav-bar>
+        <a mat-tab-link
+        routerLink="/"
+        routerLinkActive ="routerLinkActive"
+        [routerLinkActiveOptions]="{exact:true}"
+        >
+        Main Page
+        </a>
+        
+        <a mat-tab-link
+        routerLink="/saved-draws"
+        routerLinkActive ="routerLinkActive"
+        >
+        Saved Draws
+        </a>
+    </nav>
+</div>
+    <router-outlet></router-outlet>

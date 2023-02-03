@@ -1,0 +1,32 @@
+
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+.tab-group{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60%;
+    background-color: grey;
+
+    background: -webkit-linear-gradient(to bottom,grey, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, grey, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px #888888;
+}
+
+.mat-tab-link{
+    color:black;
+    font-family: 'Kdam Thmor Pro', sans-serif !important;
+    font-weight: 900;
+}
+
+.routerLinkActive{
+    font-size: x-large;
+    
+}
+
+
+

@@ -1,0 +1,111 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 60%;
+    height: 100%;
+    background: #b92b27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-top: 2%;
+    overflow: hidden;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px #888888;
+}
+
+.commonDiv{
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    width: 20%;
+}
+
+.first-team{
+    width: 20%;
+}
+
+.player-list{
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-list{
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 85vh;  
+}
+
+.resetButton{
+    background: #8E2DE2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    width: 83px;
+
+}
+
+.drawButton{
+    background: #b92b27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 83px;
+    text-align: center;
+    padding: 0;
+}
+
+.resetButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.removePlayerIcon{
+    cursor: pointer;
+    display: flex;
+    align-self: flex-end;
+    color: black;
+
+}
+
+mat-list-item,button,mat-form-field,mat-checkbox{
+    font-family: 'Kdam Thmor Pro', sans-serif !important;
+    color: white !important;
+    
+}
+
+.tab-group{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60%;
+}
+
+.fab-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+::ng-deep snack-bar-container.custom-class {
+    background: yellow;
+  }
+  
+::ng-deep .custom-class .mat-simple-snackbar {
+    color: green;
+  }
+
+
+::ng-deep .mat-tooltip {
+    font-family: 'Kdam Thmor Pro', sans-serif !important;
+    color: white !important;
+    font-weight: bold;
+    background: #b92b27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

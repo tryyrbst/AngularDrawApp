@@ -1,0 +1,70 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    /* justify-content: space-around; */
+    width: 60%;
+    height: 100%;
+    background: #b92b27;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-top: 2%;
+    overflow-y:auto;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px #888888;
+
+}
+
+.card-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.deleteButton{
+    background-color: red;
+    height: auto;
+    width: 35px;
+    font-weight: bold;
+    padding: 0;
+    font-family: 'Kdam Thmor Pro', sans-serif !important;
+    color: white !important;
+    display: flex;
+    justify-content: center;
+    position: absolute; 
+    bottom: 5px;
+}
+
+.mat-card{
+    font-family: 'Kdam Thmor Pro', sans-serif !important;
+    background-color: black;
+    color: white !important; 
+    height: 256px;
+    width: 255px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    flex: 0 1 255px
+}
+
+.mat-card-subtitle{
+    color:red;
+}
+
+.reloadButton{
+    color: white;
+    font-family: 'Kdam Thmor Pro', sans-serif !important;
+    display: flex;
+    height: auto;
+    width: 35px;
+    font-weight: bold;
+    justify-content: center;
+    position: absolute;
+    bottom: 5px;
+    left: 80px;
+    background-color: grey;
+    
+}

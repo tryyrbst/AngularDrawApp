@@ -1,0 +1,32 @@
+<div class="container">
+    <!-- <p *ngFor="let draw of drawList">{{draw.id}}  - {{draw.firstTeam}}</p> -->
+    <mat-card class="draw-card" *ngFor="let draw of drawList index as index">
+        <mat-card-header>
+          <mat-card-subtitle>
+            {{draw.date}}
+          </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="card-content">
+            <div class="first">
+                <ul>
+                    <li *ngFor="let team of draw.firstTeam">
+                        <b>{{team}}</b>
+                    </li>
+                </ul>
+            </div>
+            <div class="second">
+                <ul>
+                    <li *ngFor="let team2 of draw.secondTeam">
+                        <b style="color: rgb(180, 180, 34);">{{team2}}</b>
+                    </li>    
+                </ul>
+            </div>
+        </mat-card-content>
+    
+        <mat-card-actions>
+          <button mat-raised-button class="deleteButton" (click)="onDeleteDrawClick(index)">DELETE</button>
+          <button mat-raised-button class="reloadButton" (click)="onReloadClick(draw.firstTeam.concat(draw.secondTeam))">RELOAD</button>
+        </mat-card-actions>
+        
+      </mat-card>
+</div>

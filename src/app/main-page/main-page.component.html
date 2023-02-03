@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="first-team commonDiv">
+        <b>FIRST TEAM</b>
+        <mat-list>
+            <mat-list-item *ngFor="let player of firstTeam">
+                • {{player}}
+                <mat-divider style="width:221px;"></mat-divider>
+            </mat-list-item>
+        </mat-list>
+    </div>
+    
+    <div class="player-list commonDiv">
+        <div class="header-list">
+        <b>PLAYER LIST - {{playerList.length}}</b>
+        <mat-list style="align-self:flex-start;">
+            <mat-list-item *ngFor="let player of playerList ;index as index" style="display:flex;justify-content:flex-start;">
+                    {{player}}
+                    <mat-icon class="removePlayerIcon" (click)="removePlayer(index)">cancel</mat-icon>
+                    <mat-divider style="width:221px;"></mat-divider>
+            </mat-list-item>
+        </mat-list>
+    </div>
+
+    <form (ngSubmit)="onAddPlayer(playerForm)" #playerForm="ngForm">
+        <mat-form-field appearance="fill">
+            <mat-label>Player Name</mat-label>
+            <input matInput name="playerName" ngModel required #playerName="ngModel">
+            <mat-checkbox name="isGoalKeeper" ngModel #isGoalKeeper="ngModel">Goalkeeper</mat-checkbox>   
+        </mat-form-field>
+        <div class="buttons">
+            <button mat-raised-button color="accent" type="submit" style="margin-right:5px;width:83px;" [disabled]="!playerForm.valid">Add</button>
+            <button mat-raised-button class="drawButton" type="button"  (click)="onDrawClicked()">Draw Next</button>
+        </div>
+        <div class="resetButtons">
+            <button mat-raised-button class="resetButton" type="button" (click)="onResetClicked()" style="margin-top:10px;">Reset</button>
+            <button mat-raised-button class="resetButton" type="button" (click)="onAgainClicked()" style="margin-top:10px;margin-left: 5px;" [disabled]="firstTeam.length == 0 && secondTeam.length == 0">Reload</button>
+        </div>
+        <div class="fab-container">
+            <button mat-mini-fab color="primary" type="button" (click)="onFabClicked()" [matTooltip]="'Saves the current draw.'" [matTooltipPosition]="position.value!"  aria-label="Example icon button with a menu icon" [disabled]="firstTeam.length == 0 || secondTeam.length == 0">
+              <mat-icon>save</mat-icon>
+            </button>
+        </div>
+    </form>
+    </div>
+    <div class="second-team commonDiv">
+        <b>SECOND TEAM</b>
+        <mat-list>
+            <mat-list-item *ngFor="let player of secondTeam">
+                • {{player}}
+                <mat-divider style="width:221px;"></mat-divider>
+            </mat-list-item>
+        </mat-list>
+    </div>
+</div> 
